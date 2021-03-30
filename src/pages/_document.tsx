@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <title></title>
+                <title>Marvel</title>
                 <Head>
                 </Head>
                 <Main />
