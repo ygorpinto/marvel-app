@@ -6,6 +6,8 @@
 .pnp.js
 .history
 .next
+.env
+config
 
 # testing
 /coverage
