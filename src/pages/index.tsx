@@ -1,56 +1,45 @@
-import Container from "../components/Container";
-import keys from '../../config/apiKeys'
+import Container from "../components/Container/Container";
 import { useEffect, useState } from "react";
+import HeaderStyles from "../components/Header/HeaderStyles";
 
-const API_KEY = keys.API_KEY
-const HASH = keys.HASH
 
 export default function Home() {
-  
-  const [result,setResult] = useState(undefined);
-  const [offset,setOffset] = useState(0);
-  
-  const api = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&offset=${offset}`
-  
-  useEffect(()=>{
+
+  const [result, setResult] = useState([]);
+  const [search, setSearch] = useState('');
+
+  const api = `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json`
+
+  useEffect(() => {
     fetchData()
-  },[offset])
-  
-  const nextPage = () => {
-    setOffset(offset+20)
-  }
-  const prevPage = () => {
-    setOffset(offset-20)
-  }
-  
+  }, [])
+
   const fetchData = async () => {
     const res = await fetch(api)
     const data = await res.json()
-    setResult(data);
+    setResult(data)
   }
-  
+
+  let searchValue = search.toLowerCase();
+  let filterResults = result.filter(item=>item.slug.includes(searchValue))
+
   return (
-  <>
+    <>
+      <HeaderStyles>
+            <input
+            onChange={e=>setSearch(e.target.value)} 
+            placeholder="Digite o seu personagem"
+            type="text"/>
+      </HeaderStyles>
       <Container>
-        {typeof result !== "undefined" ? result.data.results.map(item => (
-          <div key={item.name}>
-            <img src={`${item.path}`}/>
+        {filterResults.map(item => (
+          <div className="item"
+          key={item.slug}>
             <p>{item.name}</p>
+            <img src={`${item.images.md}`} />
           </div>
-        )):("")}
-        {offset === 0 ? <button
-        onClick={nextPage}
-        >Proxima</button> : (
-          <>
-        <button
-        onClick={prevPage}
-        >Anterior</button>
-          <button
-        onClick={nextPage}
-        >Proxima</button>
-        </>
-        )}
+        ))}
       </Container>
-  </>
+    </>
   )
 }
