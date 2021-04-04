@@ -23,18 +23,23 @@ export default function Home() {
   let searchValue = search.toLowerCase();
   let filterResults = result.filter(item=>item.slug.includes(searchValue))
 
+  const showAlert = (data) => {
+    alert(`eu sou o ${data} item`)
+  }
+
   return (
     <>
       <HeaderStyles>
         <img src="./Marvel.png"/>
             <input
             onChange={e=>setSearch(e.target.value)} 
-            placeholder="Digite o seu personagem"
+            placeholder="Digite um personagem"
             type="text"/>
       </HeaderStyles>
       <Container>
-        {filterResults.map(item => (
-          <div className="item"
+        {filterResults.map((item,index) => (
+          <div 
+          className="item"
           key={item.slug}>
             <p>{item.name}</p>
             <img src={`${item.images.md}`} />
