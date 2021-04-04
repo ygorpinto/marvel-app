@@ -26,6 +26,7 @@ export default function Home() {
   return (
     <>
       <HeaderStyles>
+        <img src="./Marvel.png"/>
             <input
             onChange={e=>setSearch(e.target.value)} 
             placeholder="Digite o seu personagem"
