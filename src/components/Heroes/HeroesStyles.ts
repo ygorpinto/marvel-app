@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
 export const HeroesStyles = styled.div`
-position:absolute;
-height:100vh;
-width:100vw;
-.main {
+    
     position:absolute;
     top:10%;
     left:27%;
@@ -20,7 +17,7 @@ width:100vw;
     font-family: 'Raleway', sans-serif;
     color:#fff;
     font-weight:600;
-
+    
     .character {
         margin:2rem 0 0 0;
         display:flex;
@@ -62,6 +59,16 @@ width:100vw;
     img {
         height:10rem;
         border-radius:20%;
+    }
+
+    button {
+        background:transparent;
+        border:none;
+        position:absolute;
+        top:4%;
+        right:10%;
+        font-size:1.4rem;
+        color:#fff;
     }
 }
 `

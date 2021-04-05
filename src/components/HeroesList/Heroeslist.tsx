@@ -9,7 +9,7 @@ const HeroesList = () => {
     const [result, setResult] = useState([]);
     const [search, setSearch] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const [isDataInfo, setIsDataInfo] = useState(true);
+    const [isDataInfo, setIsDataInfo] = useState(false);
     const [index, setIndex] = useState(1);
     
     const api = `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json`
@@ -31,7 +31,9 @@ const HeroesList = () => {
   let filterResults = result.filter(item=>item.slug.includes(searchValue))
 
   const heroes = filterResults.map((item,index) => {
-    const getIndex = () => setIndex(index+1)
+    const getIndex = () => {
+      setIsDataInfo(true)
+      setIndex(index+1)}
   return (
     <div 
     className="item"
@@ -49,7 +51,12 @@ const HeroesList = () => {
   }
   return (
     <>
-    <Heroes index={index}/>
+    {isDataInfo ? (
+      <Heroes 
+      setDataInfo={setIsDataInfo}
+      dataInfo={isDataInfo}
+      index={index}/>
+    ) : (null)}
       <HeaderStyles>
         <img src="./Marvel.png"/>
             <input

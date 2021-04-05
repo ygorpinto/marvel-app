@@ -24,7 +24,7 @@ interface Hero {
     }
 }
 
-const Heroes = ({ index }) => {
+const Heroes = ({ index,dataInfo,setDataInfo }) => {
 
     const [hero, setHero] = useState({} as Hero)
 
@@ -38,14 +38,18 @@ const Heroes = ({ index }) => {
         setHero(data)
     }
 
-    console.log(hero);
-
+   const close = () => {
+    setDataInfo(false)
+   }
 
     return (
         <>
             <HeroesStyles>
+                <button
+                onClick={close}
+                >X</button>
                 {typeof hero.powerstats !== 'undefined' ? (
-                    <div className="main">
+                    <div>
                         <header>
                             <h3>{hero.name}</h3>
                             <img src={`${hero.images.sm}`} />
