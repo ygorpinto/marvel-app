@@ -33,7 +33,7 @@ const HeroesList = () => {
   const heroes = filterResults.map((item,index) => {
     const getIndex = () => {
       setIsDataInfo(true)
-      setIndex(index+1)}
+      setIndex(item.id)}
   return (
     <div 
     className="item"

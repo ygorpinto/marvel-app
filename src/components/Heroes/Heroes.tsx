@@ -42,6 +42,9 @@ const Heroes = ({ index,dataInfo,setDataInfo }) => {
     setDataInfo(false)
    }
 
+   console.log(index);
+   
+
     return (
         <>
             <HeroesStyles>
