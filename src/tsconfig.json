@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Heroes/Heroes.tsx"  ],
   "exclude": [
     "node_modules"
   ]
