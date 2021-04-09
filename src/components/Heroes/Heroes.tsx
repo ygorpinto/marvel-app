@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { HeroesStyles } from "./HeroesStyles"
-import { Loading } from "../Loading/Loading";
 
 interface Hero {
     name: string,
@@ -24,7 +23,7 @@ interface Hero {
     }
 }
 
-const Heroes = ({ index,dataInfo,setDataInfo }) => {
+const Heroes = ({ index,setDataInfo }) => {
 
     const [hero, setHero] = useState({} as Hero)
 

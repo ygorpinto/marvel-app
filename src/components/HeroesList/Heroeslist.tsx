@@ -54,9 +54,9 @@ const HeroesList = () => {
     {isDataInfo ? (
       <Heroes 
       setDataInfo={setIsDataInfo}
-      dataInfo={isDataInfo}
       index={index}/>
     ) : (null)}
+        <div>
       <HeaderStyles>
         <img src="/Marvel.png"/>
             <input
@@ -67,6 +67,7 @@ const HeroesList = () => {
       <Container>
         {heroes}
       </Container>
+      </div>
     </>
   )
 }

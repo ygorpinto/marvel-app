@@ -9,8 +9,8 @@ justify-content:center;
 align-items:center;
 flex-direction:column;
 input {
-    height:3rem;
-    width:18rem;
+    height:5rem;
+    width:20rem;
     border:none;
     background-color:rgba(0,0,0,0.02);
     border-radius:1rem;
@@ -22,7 +22,7 @@ input {
 }
 
 img {
-    width:12%;
+    width:20%;
     margin:1rem 0 1rem 0;
 }
 `
