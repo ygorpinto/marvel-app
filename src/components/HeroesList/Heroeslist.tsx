@@ -45,7 +45,7 @@ const HeroesList = () => {
     ) : (null)}
         <div>
       <HeaderStyles>
-        <img src="marvel-icon-png-1.jpg"/>
+        <img src="https://icon-library.com/images/marvel-icon-png/marvel-icon-png-1.jpg"/>
             <input
             onChange={e=>setSearch(e.target.value)} 
             placeholder="Digite um personagem"
