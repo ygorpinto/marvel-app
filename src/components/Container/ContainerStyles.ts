@@ -10,7 +10,7 @@ font-family: 'Raleway', sans-serif;
 
 div {
     margin:1.2rem;
-    height:15vh;
+    height:15rem;
     transition:brightness 2s;
 
     p{
@@ -25,15 +25,16 @@ div {
         filter: brightness(60%);
     }
 }
+}
 
 @media screen and (max-width:500px) {
 
-display:flex;
-height:80vh;
-justify-content:center;
+width:65%;
+display:grid;
+grid-template-columns: 1fr 1fr;
+justify-items:center;
+align-items:center;
 flex-wrap:wrap;
-font-family: 'Raleway', sans-serif;
-margin:0;
 
 img {
     height:10rem;
@@ -46,10 +47,11 @@ div {
     align-items:center;
     justify-content:center;
     height:5rem;
-    margin:0.2rem 0;
     transition:brightness 2s;
+    margin:1.5rem 0rem;
 
     p{
+    font-family: 'Raleway', sans-serif;
     margin:0;
     }
 

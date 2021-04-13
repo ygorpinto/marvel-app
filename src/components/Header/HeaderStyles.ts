@@ -25,6 +25,23 @@ img {
     width:20%;
     margin:1rem 0 1rem 0;
 }
+
+@media screen and (max-width:500px){
+
+margin:1rem;
+height:20vh;
+width:40%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+img {
+    width:10rem;
+    margin:1rem 0 1rem 0;
+}
+
+}
 `
 
 
