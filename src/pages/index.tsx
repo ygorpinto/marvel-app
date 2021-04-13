@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Router>
         <MainContainer>
-          <Main />
           <Switch>
             <Route path="/" exact>
             </Route>

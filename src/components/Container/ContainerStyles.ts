@@ -29,7 +29,8 @@ div {
 
 @media screen and (max-width:500px) {
 
-width:65%;
+height:80vh;
+width:100%;
 display:grid;
 grid-template-columns: 1fr 1fr;
 justify-items:center;
@@ -48,7 +49,7 @@ div {
     justify-content:center;
     height:5rem;
     transition:brightness 2s;
-    margin:1.5rem 0rem;
+    margin:1rem 0rem;
 
     p{
     font-family: 'Raleway', sans-serif;
