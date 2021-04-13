@@ -22,8 +22,37 @@ font-family: 'Raleway', sans-serif;
     border-radius:8%;
 
     :hover {
-        filter: brightness(60%)
+        filter: brightness(60%);
     }
 }
+
+@media screen and (max-width:500px) {
+display:grid;
+grid-template-columns:1fr;
+justify-content:center;
+flex-wrap:wrap;
+font-family: 'Raleway', sans-serif;
+margin:0;
+
+.item {
+
+    margin:0.2rem 0;
+    height:1rem;
+    transition:brightness 2s;
+
+    p{
+    margin:0;
+    }
+
+    img {
+    width:3rem;
+    height:3rem;
+    border-radius:8%;
+
+    :hover {
+        filter: brightness(60%);
+    }
+        }      
+    }
 }
 `
