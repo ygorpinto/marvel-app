@@ -30,19 +30,6 @@ const HeroesList = () => {
   let searchValue = search.toLowerCase();
   let filterResults = result.filter(item=>item.slug.includes(searchValue))
 
-  const heroes = filterResults.map((item,index) => {
-    const getIndex = () => {
-      setIsDataInfo(true)
-      setIndex(item.id)}
-  return (
-    <div 
-    className="item"
-    onClick={getIndex}
-    key={item.slug}>
-      <p>{item.name}</p>
-      <img src={`${item.images.md}`} />
-    </div>
-  )})
 
   if (isLoading) {
     return (
@@ -65,7 +52,18 @@ const HeroesList = () => {
             type="text"/>
       </HeaderStyles>
       <Container>
-        {heroes}
+        {filterResults.map((item,index) => {
+    const getIndex = () => {
+      setIsDataInfo(true)
+      setIndex(item.id)}
+  return (
+    <div
+    onClick={getIndex}
+    key={item.slug}>
+      <p>{item.name}</p>
+      <img src={`${item.images.md}`} />
+    </div>
+  )})}
       </Container>
       </div>
     </>

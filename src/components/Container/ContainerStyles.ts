@@ -8,9 +8,9 @@ justify-content:center;
 flex-wrap:wrap;
 font-family: 'Raleway', sans-serif;
 
-.item {
+div {
     margin:1.2rem;
-    height:15rem;
+    height:15vh;
     transition:brightness 2s;
 
     p{
@@ -28,18 +28,25 @@ font-family: 'Raleway', sans-serif;
 
 @media screen and (max-width:500px) {
 
-display:grid;
-grid-template-columns:1fr;
-height:70vh;
+display:flex;
+height:80vh;
 justify-content:center;
 flex-wrap:wrap;
 font-family: 'Raleway', sans-serif;
 margin:0;
 
-.item {
+img {
+    height:10rem;
+}
 
+div {
+    
+    flex-direction:column;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:5rem;
     margin:0.2rem 0;
-    height:1rem;
     transition:brightness 2s;
 
     p{

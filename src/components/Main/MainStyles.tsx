@@ -38,12 +38,12 @@ div {
 width:10%;
 height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:space-evenly;
+justify-content:center;
 align-items:center;
 
 
 div {
+    margin:0.4rem 0;
     display:flex;
     justify-content:center;
     align-items:center;
