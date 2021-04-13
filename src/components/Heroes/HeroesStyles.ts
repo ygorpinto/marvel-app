@@ -2,21 +2,29 @@ import styled from 'styled-components'
 
 export const HeroesStyles = styled.div`
     
+    z-index:10;
     position:absolute;
-    top:10%;
-    left:27%;
-    height:30rem;
-    width:40rem;
+    height:100vh;
+    width:100vw;
     display: flex;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    background-color:rgba(0,0,0,0.5);
-    border-radius:5rem;
-    backdrop-filter:blur(5px);
-    font-family: 'Raleway', sans-serif;
-    color:#fff;
-    font-weight:600;
+   
+
+    .heroes {
+        height:70vh;
+        width:40%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        background-color:rgba(0,0,0,0.5);
+        border-radius:5rem;
+        backdrop-filter:blur(5px);
+        font-family: 'Raleway', sans-serif;
+        color:#fff;
+        font-weight:600;
+    }
     
     .character {
         margin:2rem 0 0 0;
@@ -69,34 +77,45 @@ export const HeroesStyles = styled.div`
         right:10%;
         font-size:1.4rem;
         color:#fff;
+        cursor: pointer;
     }
 
 @media screen and (max-width:500px) {
+    z-index:10;
     position:absolute;
-    top:10%;
-    right:10%;
-    height:70vh;
-    width:80%;
+    height:100vh;
+    width:100vw;
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    background-color:rgba(0,0,0,0.5);
-    border-radius:5rem;
-    backdrop-filter:blur(5px);
-    font-family: 'Raleway', sans-serif;
-    color:#fff;
-    font-weight:600;
+   
+
+    .heroes {
+        width:90%;
+        height:80vh;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        background-color:rgba(0,0,0,0.5);
+        border-radius:5rem;
+        backdrop-filter:blur(5px);
+        font-family: 'Raleway', sans-serif;
+        color:#fff;
+        font-weight:600;
+        font-size:0.8rem;
+    }
     
     .character {
-        margin:2rem 0 0 0;
+        margin:0 0 0 0;
         display:flex;
         justify-content:center;
         align-items:center;
     }
 
     .appearance{
-        margin:0 1rem 0 0;
+        margin:0 0rem 0 0;
 
         p {
             margin:0.2rem;
@@ -110,7 +129,7 @@ export const HeroesStyles = styled.div`
         flex-direction:column;
         
         p {
-            margin:0.2rem;
+            margin:0.1rem;
         }
     }
 
@@ -130,14 +149,15 @@ export const HeroesStyles = styled.div`
     img {
         height:5rem;
         border-radius:20%;
+        margin-bottom:0.8rem;
     }
 
     button {
         background:transparent;
         border:none;
         position:absolute;
-        top:4%;
-        right:10%;
+        top:6%;
+        right:12%;
         font-size:1.4rem;
         color:#fff;
     }

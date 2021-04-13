@@ -7,7 +7,6 @@ overflow:scroll;
 display:flex;
 justify-content:center;
 align-items:center;
-grid-template-columns: 1fr;
 `
 
 export default MainContainerStyles;

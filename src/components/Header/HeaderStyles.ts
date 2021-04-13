@@ -1,8 +1,7 @@
 import styled from  'styled-components'
 
 const HeaderStyles = styled.header`
-margin:1rem;
-height:20vh;
+height:30vh;
 width:100%;
 display:flex;
 justify-content:center;
@@ -22,8 +21,8 @@ input {
 }
 
 img {
+    margin-top:2rem;
     width:20%;
-    margin:1rem 0 1rem 0;
 }
 
 @media screen and (max-width:500px){

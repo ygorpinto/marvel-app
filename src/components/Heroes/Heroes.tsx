@@ -47,6 +47,8 @@ const Heroes = ({ index,setDataInfo }) => {
     return (
         <>
             <HeroesStyles>
+                <div className="heroes">
+
                 <button
                 onClick={close}
                 >X</button>
@@ -72,6 +74,7 @@ const Heroes = ({ index,setDataInfo }) => {
                             </div>
                         </div>
                     </div>) : (null)}
+                </div>
             </HeroesStyles>
         </>
     )
