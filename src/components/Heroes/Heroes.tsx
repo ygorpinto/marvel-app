@@ -48,10 +48,11 @@ const Heroes = ({ index,setDataInfo }) => {
         <>
             <HeroesStyles>
                 <div className="heroes">
-
+                <div className="closeButton">
                 <button
                 onClick={close}
                 >X</button>
+                </div>
                 {typeof hero.powerstats !== 'undefined' ? (
                     <div>
                         <header>

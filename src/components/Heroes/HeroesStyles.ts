@@ -161,5 +161,13 @@ export const HeroesStyles = styled.div`
         font-size:1.4rem;
         color:#fff;
     }
+
+
+    .closeButton {
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:right;
+    }
+
 }
 `
